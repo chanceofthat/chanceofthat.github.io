@@ -2458,32 +2458,3 @@ if (typeof module != 'undefined' && module.exports) {
 }
 
 })(window, document, 'Hammer');
-
-(function() {
-
-    // FORM / CONTACT
-
-    var $contactForm = $('#contactForm');
-    // VALIDATE FORM
-    $contactForm.validate();
-    $contactForm.submit(function(e) {
-        e.preventDefault();
-        $.ajax({
-            url: '//formspree.io/chancesofthat@gmail.com',
-            method: 'POST',
-            data: $(this).serialize(),
-            dataType: 'json',
-            beforeSend: function() {
-                $contactForm.append('<div class="message message--loading">Sending message…</div>');
-            },
-            success: function(data) {
-                $contactForm.find('.alert--loading').hide();
-                $contactForm.append('<div class="message message--success">Message sent!</div>');
-            },
-            error: function(err) {
-                $contactForm.find('.alert--loading').hide();
-                $contactForm.append('<div class="message message--error">Ops, there was an error.</div>');
-            }
-        });
-    });
-})();
