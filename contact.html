@@ -83,7 +83,7 @@ var STYLE_PREFIX = 'wsite';
         <div class="container">
           <div class="logo"><span class="wsite-logo">
 
-	<a href="">
+	<a href="/">
 
 	<span id="wsite-title">Chance daniel</span>
 
@@ -276,7 +276,7 @@ var STYLE_PREFIX = 'wsite';
 						<input type="hidden" name="form_version" value="2" />
 						<input type="hidden" name="wsite_approved" id="wsite-approved" value="approved" />
 						<input type="hidden" name="ucfid" value="124457541377629286" />
-						<input type='submit' style='position:absolute;top:0;left:-9999px;width:1px;height:1px' /><a class='wsite-button' onclick="document.getElementById('form-124457541377629286').submit()"><span class='wsite-button-inner'>Submit</span></a>
+						<input type='submit' style='position:absolute;top:0;left:-9999px;width:1px;height:1px' /><a class='wsite-button' onclick="if (document.getElementById('form-124457541377629286').checkValidity()){ document.getElementById('form-124457541377629286').submit(); } else { alert('Please complete required fields.'); }"><span class='wsite-button-inner'>Submit</span></a>
 					</div>
 				</form>
 
